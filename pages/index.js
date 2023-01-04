@@ -18,6 +18,7 @@ export default function Home() {
       <header>
         <nav>
           <img />
+          <a href='/'>All Programs</a>
           <a href='/find-programs'>Find Programs</a>
           <a href='/plan-programs'>Plan Programs</a>
           <a href='/about'>About</a>
