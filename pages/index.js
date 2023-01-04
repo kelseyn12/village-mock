@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({data}) {
   return (
     <>
       <Head>
@@ -27,9 +27,19 @@ export default function Home() {
         </nav>
       </header>
       <main className={styles.main}>
-       
+      {data.map(evt => <div><h1>{evt.name}</h1> <p>{evt.grade}</p> <p>{evt.date_begin}-{evt.date_end}</p> <p>{evt.location}</p> <button>Register</button> <a href='/'>Learn More</a></div>)}
       </main>
       <footer className={styles.footer}></footer>
     </>
   )
 }
+
+
+export async function getServerSideProps() {
+  const { programs } = await import('/data/data.json')
+  return {
+      props: {
+         data: programs, 
+      }
+  }
+  }
