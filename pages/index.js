@@ -18,10 +18,10 @@ export default function Home() {
       <header>
         <nav>
           <img />
-          <a href=''>Find Programs</a>
-          <a href=''>Plan Programs</a>
-          <a href=''>About</a>
-          <a href=''>Donate</a>
+          <a href='/find-programs'>Find Programs</a>
+          <a href='/plan-programs'>Plan Programs</a>
+          <a href='/about'>About</a>
+          <a href='/donate'>Donate</a>
           <button>Log in</button>
         </nav>
       </header>
