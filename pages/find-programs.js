@@ -1,7 +1,7 @@
-const Find = () => {
+const FindPrograms = () => {
   return (
     <h1>Find programs page</h1>
   )
 }
 
-export default Find;
+export default FindPrograms;
