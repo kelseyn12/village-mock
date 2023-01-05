@@ -18,7 +18,7 @@ export default function Home({data}) {
       <header>
         <nav>
           <img />
-          <a href='/'>All Programs</a>
+          <a href='/'>Village Logo</a>
           <a href='/find-programs'>Find Programs</a>
           <a href='/plan-programs'>Plan Programs</a>
           <a href='/about'>About</a>
@@ -27,7 +27,7 @@ export default function Home({data}) {
         </nav>
       </header>
       <main className={styles.main}>
-      {data.map(evt => <div><h1>{evt.name}</h1> <p>{evt.grade}</p> <p>{evt.date_begin}-{evt.date_end}</p> <p>{evt.location}</p> <button>Register</button> <a href='/'>Learn More</a></div>)}
+      {data.map(evt => <div key={evt.name}><h1>{evt.name}</h1> <p>Grades {evt.grade}</p> <p>{evt.date_begin}-{evt.date_end}</p> <p>{evt.location}</p> <button>Register</button> <a href='/'>Learn More</a></div>)}
       </main>
       <footer className={styles.footer}></footer>
     </>
@@ -35,7 +35,7 @@ export default function Home({data}) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { programs } = await import('/data/data.json')
   return {
       props: {
