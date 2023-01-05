@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+import AllPrograms from './all-programs'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,13 +29,15 @@ export default function Home({data}) {
         </nav>
       </header>
       <main className={styles.main}>
+      <AllPrograms data={data} />
+
       {data.map(evt => <div key={evt.name}><h1>{evt.name}</h1> <p>Grades {evt.grade}</p> <p>{evt.date_begin}-{evt.date_end}</p> <p>{evt.location}</p> <button>Register</button> <a href='/'>Learn More</a></div>)}
+      
       </main>
       <footer className={styles.footer}></footer>
     </>
   )
 }
-
 
 export async function getStaticProps() {
   const { programs } = await import('/data/data.json')
