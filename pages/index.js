@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import AllPrograms from './all-programs'
+import Link from 'next/link'
 
 
 
@@ -20,12 +20,16 @@ export default function Home({data}) {
 
       <header>
         <nav>
-          <img />
-          <a href='/'>Village Logo</a>
-          <a href='/find-programs'>Find Programs</a>
-          <a href='/plan-programs'>Plan Programs</a>
-          <a href='/about'>About</a>
-          <a href='/donate'>Donate</a>
+          <Link href='/'>Village Logo
+          </Link>
+          <Link href='/find-programs'>Find Programs
+          </Link>
+          <Link href='/plan-programs'>Plan Programs
+          </Link>
+          <Link href='/about'>About
+          </Link>
+          <Link href='/donate'>Donate
+          </Link>
           <button>Log in</button>
         </nav>
       </header>
@@ -34,7 +38,8 @@ export default function Home({data}) {
       <h1>All Programs</h1>
       </div>
       <div>
-      {data.map(evt => <div key={evt.name}><h1>{evt.name}</h1> <p>Grades {evt.grade}</p> <p>{evt.date_begin}-{evt.date_end}</p> <p>{evt.location}</p> <button>Register</button> <a href='/'>Learn More</a></div>)}
+      {data.map(evt => 
+      <div key={evt.name}><h1>{evt.name}</h1> <p>Grades {evt.grade}</p> <p>{evt.date_begin}-{evt.date_end}</p> <p>{evt.location}</p> <button>Register</button> <a href='/'>Learn More</a></div>)}
       
       
       </div>
