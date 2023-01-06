@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-
+import { AllPrograms } from '../src/components/home/all-programs'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -33,17 +33,7 @@ export default function Home({data}) {
           <button>Log in</button>
         </nav>
       </header>
-      <main className={styles.main}>
-      <div>
-      <h1>All Programs</h1>
-      </div>
-      <div>
-      {data.map(evt => 
-      <div key={evt.name}><h1>{evt.name}</h1> <p>Grades {evt.grade}</p> <p>{evt.date_begin}-{evt.date_end}</p> <p>{evt.location}</p> <button>Register</button> <a href='/'>Learn More</a></div>)}
-      
-      
-      </div>
-      </main>
+      <AllPrograms data={data} />
       <footer className={styles.footer}></footer>
     </>
   )
