@@ -2,9 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import { AllPrograms } from '../src/components/home/all-programs'
-
+import { Header } from '../src/components/header/header'
+import { Footer } from '../src/components/footer/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,24 +17,10 @@ export default function Home({data}) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <header>
-        <nav>
-          <Link href='/'>Village Logo
-          </Link>
-          <Link href='/find-programs'>Find Programs
-          </Link>
-          <Link href='/plan-programs'>Plan Programs
-          </Link>
-          <Link href='/about'>About
-          </Link>
-          <Link href='/donate'>Donate
-          </Link>
-          <button>Log in</button>
-        </nav>
-      </header>
+      <Header />
+      
       <AllPrograms data={data} />
-      <footer className={styles.footer}></footer>
+      <Footer />
     </>
   )
 }
