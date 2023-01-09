@@ -1,10 +1,20 @@
 import Link from "next/link"
+import { useState } from "react"
 
-export const Header = () => (
+export const Header = () => {
+
+
+
+return(
 <header>
         <nav>
           <Link href='/'>Village Logo
           </Link>
+          <input
+          type="text"
+          placeholder="Search..."
+          
+        />
           <Link href='/find-programs'>Find Programs
           </Link>
           <Link href='/plan-programs'>Plan Programs
@@ -15,5 +25,8 @@ export const Header = () => (
           </Link>
           <button>Log in</button>
         </nav>
+        
+
       </header>
 )
+};
