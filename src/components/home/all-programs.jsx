@@ -63,29 +63,13 @@ export const AllPrograms = ({ data }) => {
     </div>
   ))}
 </div>
-      {/* <div className="eventCardContainer">
-        
-      {currentPageData.map((evt) => (
-        <div className="eventCard">
-        <div key={evt.name}>
-          <h3>{evt.name}</h3>
-          <p>Grades {evt.grade}</p>
-          <p>
-            {evt.date_begin}-{evt.date_end}
-          </p>
-          <p>{evt.location}</p>
-          <button className="registerButton">Register</button>
-          <a className="learnMoreButton" href="/">Learn More</a>
-        </div>
-        </div>
-      ))}
-      
-      </div> */}
+      <div className='paginationButtons'>
       <Pagination
         count={numPages}
         page={currentPage}
         onChange={handlePageChange}
       />
+      </div>
     </main>
   );
 };

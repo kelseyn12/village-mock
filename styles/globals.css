@@ -131,6 +131,37 @@ p {
   font-size: 18px;
   padding: 5px;
 }
+.paginationButtons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+}
+
+.footerLeft {
+  flex: 1;
+}
+
+.footerRight {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.findPrograms,
+.planPrograms,
+.aboutUs {
+  flex: 1;
+  text-align: center;
+}
 
 
 
@@ -172,6 +203,32 @@ p {
   .eventCard {
     width: 100%;
     margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerContainer {
+    flex-wrap: wrap;
+  }
+  
+  .footerLeft {
+    flex: 100%; 
+    text-align: center; 
+    order: 1;
+    padding-top: 1rem;
+  }
+  .footerRight {
+    flex: 100%; 
+    text-align: center; 
+    order: 0;
+    padding-top: 1rem;
+  }
+  .footerLeft p,
+  .footerRight p {
+    font-size: 0.8em;
+  }
+  .footerRight h4 {
+    font-size: 0.8em;
   }
 }
 
