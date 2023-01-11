@@ -38,6 +38,7 @@ export const AllPrograms = ({ data }) => {
 
   return (
     <main>
+      <div className="eventCard">
       {currentPageData.map((evt) => (
         <div key={evt.name}>
           <h1>{evt.name}</h1>
@@ -50,6 +51,7 @@ export const AllPrograms = ({ data }) => {
           <a href="/">Learn More</a>
         </div>
       ))}
+      </div>
       <Pagination
         count={numPages}
         page={currentPage}
