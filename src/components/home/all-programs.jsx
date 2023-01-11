@@ -1,6 +1,4 @@
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-
-
+import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 import { Pagination } from "@material-ui/lab";
 import { useState } from "react";
@@ -43,32 +41,37 @@ export const AllPrograms = ({ data }) => {
   return (
     <main>
       <div className="allProgramsSearchBar">
-      <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Search..." />
       </div>
       <div className="eventCardContainer">
-  {currentPageData.map((evt) => (
-    <div className="eventCard">
-      <div className="eventCard-content" key={evt.name}>
-        <h3>{evt.name}</h3>
-        <p>Grades {evt.grade}</p>
-        <p>
-          {evt.date_begin}-{evt.date_end}
-        </p>
-        <p><LocationOnIcon fontSize="small" />{evt.location}</p>
+        {currentPageData.map((evt) => (
+          <div className="eventCard">
+            <div className="eventCard-content" key={evt.name}>
+              <h3>{evt.name}</h3>
+              <p>Grades {evt.grade}</p>
+              <p>
+                {evt.date_begin}-{evt.date_end}
+              </p>
+              <p>
+                <LocationOnIcon fontSize="small" />
+                {evt.location}
+              </p>
+            </div>
+            <div className="eventCard-buttons">
+              <button className="registerButton">Register</button>
+              <a className="learnMoreButton" href="/">
+                Learn More
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="eventCard-buttons">
-        <button className="registerButton">Register</button>
-        <a className="learnMoreButton" href="/">Learn More</a>
-      </div>
-    </div>
-  ))}
-</div>
-      <div className='paginationButtons'>
-      <Pagination
-        count={numPages}
-        page={currentPage}
-        onChange={handlePageChange}
-      />
+      <div className="paginationButtons">
+        <Pagination
+          count={numPages}
+          page={currentPage}
+          onChange={handlePageChange}
+        />
       </div>
     </main>
   );

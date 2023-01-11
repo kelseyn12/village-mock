@@ -23,20 +23,33 @@
   margin: 0;
 }
 
-html,
+html {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: #7fc1cc;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+nav {
+  background-color: #f5e2be;
+  padding: 1rem;
+}
 
 .navItem {
   font-family: "Object Sans Regular";
   font-size: 18px;
+}
+.navItem:hover {
+  background-color: #f47253;
+  border-radius: 10%;
+  padding: 5px;
 }
 
 .navContainer {
@@ -85,7 +98,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  padding: 0.8rem;
 }
 
 .eventCardContainer {
@@ -98,6 +111,7 @@ a {
 }
 
 .eventCard {
+  background-color: #f5e2be;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -115,33 +129,46 @@ a {
 }
 .registerButton,
 .learnMoreButton {
-  font-family: 'Helvetica';
+  font-family: "Helvetica";
   font-size: 18px;
   margin: 10px 0;
   padding: 5px;
+  background-color: #f4a698;
+  border-radius: 20%;
 }
 
 h3 {
-  font-family: 'Object Sans Bold';
+  font-family: "Object Sans Bold";
   font-size: 24px;
 }
 
 p {
-  font-family: 'Helvetica';
+  font-family: "Helvetica";
   font-size: 18px;
   padding: 5px;
 }
-.paginationButtons{
+.paginationButtons {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.MuiPagination-root {
+  background-color: #7fc1cc;
+}
+
+footer {
+  background-color: #faad67;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .footerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem;
+  padding: 1rem;
 }
 
 .footerLeft {
@@ -162,8 +189,6 @@ p {
   flex: 1;
   text-align: center;
 }
-
-
 
 @media screen and (max-width: 1024px) {
   .nav-col1 {
@@ -210,16 +235,16 @@ p {
   .footerContainer {
     flex-wrap: wrap;
   }
-  
+
   .footerLeft {
-    flex: 100%; 
-    text-align: center; 
+    flex: 100%;
+    text-align: center;
     order: 1;
     padding-top: 1rem;
   }
   .footerRight {
-    flex: 100%; 
-    text-align: center; 
+    flex: 100%;
+    text-align: center;
     order: 0;
     padding-top: 1rem;
   }
@@ -231,5 +256,3 @@ p {
     font-size: 0.8em;
   }
 }
-
-
