@@ -34,6 +34,11 @@ a {
   text-decoration: none;
 }
 
+.navItem {
+  font-family: "Object Sans Regular";
+  font-size: 18px;
+}
+
 .navContainer {
   position: relative;
   z-index: 2;
@@ -76,6 +81,59 @@ a {
   font-size: 24px;
 }
 
+.allProgramsSearchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.eventCardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.eventCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  padding: 1em;
+  border: 1px solid rgb(114, 114, 114);
+  margin: 1em;
+  box-shadow: 2px 2px 4px #716f6f, -2px -2px 4px #ffffff;
+}
+.eventCard-buttons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.registerButton,
+.learnMoreButton {
+  font-family: 'Helvetica';
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+h3 {
+  font-family: 'Object Sans Bold';
+  font-size: 24px;
+}
+
+p {
+  font-family: 'Helvetica';
+  font-size: 18px;
+  padding: 5px;
+}
+
+
+
 @media screen and (max-width: 1024px) {
   .nav-col1 {
     padding-top: 15px;
@@ -107,6 +165,13 @@ a {
 @media screen and (max-width: 750px) {
   .nav-col2 {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .eventCard {
+    width: 100%;
+    margin: 0;
   }
 }
 
