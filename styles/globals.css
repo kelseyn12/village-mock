@@ -48,8 +48,14 @@ nav {
 }
 .navItem:hover {
   background-color: #f47253;
-  border-radius: 10%;
+  border-radius: 10px;
   padding: 5px;
+}
+
+.logInButton {
+  background-color: #f47253;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .navContainer {
@@ -94,11 +100,21 @@ nav {
   font-size: 24px;
 }
 
+.searchBar {
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .allProgramsSearchBar {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.8rem;
+}
+
+.allProgramsInput {
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .eventCardContainer {
@@ -127,14 +143,21 @@ nav {
   flex-direction: column;
   justify-content: space-between;
 }
-.registerButton,
+.registerButton {
+  font-family: "Helvetica";
+  font-size: 18px;
+  margin: 10px 0;
+  padding: 5px;
+  background-color: #d1c979;
+  border-radius: 10px;
+}
 .learnMoreButton {
   font-family: "Helvetica";
   font-size: 18px;
   margin: 10px 0;
   padding: 5px;
   background-color: #f4a698;
-  border-radius: 20%;
+  border-radius: 10px;
 }
 
 h3 {
@@ -196,6 +219,9 @@ footer {
     padding-bottom: 15px;
     padding-left: 15px;
   }
+  .navItem {
+    font-size: 90%;
+  }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 820px) {
@@ -214,12 +240,15 @@ footer {
   .nav-col1 {
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 15px;
+    padding-left: 0px;
   }
 }
 
 @media screen and (max-width: 750px) {
   .nav-col2 {
+    display: none;
+  }
+  .searchBar {
     display: none;
   }
 }
@@ -228,6 +257,13 @@ footer {
   .eventCard {
     width: 100%;
     margin: 0;
+    font-size: 50%;
+  }
+  .registerButton {
+    font-size: 50%;
+  }
+  .learnMoreButton {
+    font-size: 50%;
   }
 }
 

@@ -41,7 +41,11 @@ export const AllPrograms = ({ data }) => {
   return (
     <main>
       <div className="allProgramsSearchBar">
-        <input type="text" placeholder="Search..." />
+        <input
+          type="text"
+          className="allProgramsInput"
+          placeholder="Search..."
+        />
       </div>
       <div className="eventCardContainer">
         {currentPageData.map((evt) => (
