@@ -49,8 +49,8 @@ export const AllPrograms = ({ data }) => {
       </div>
       <div className="eventCardContainer">
         {currentPageData.map((evt) => (
-          <div className="eventCard">
-            <div className="eventCard-content" key={evt.name}>
+          <div className="eventCard" key={evt.name}>
+            <div className="eventCard-content" >
               <h3>{evt.name}</h3>
               <p>Grades {evt.grade}</p>
               <p>
